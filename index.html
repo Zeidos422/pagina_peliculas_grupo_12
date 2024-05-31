@@ -12,7 +12,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
 <body>
@@ -20,8 +20,8 @@
     <header>
 
         <div class="cabecera">
-            <a href="index.html"> <img src="images/logo-04-pochocleras-pelis.webp" class="logo"
-                    alt="Logo de Pochocleras-Pelis"></a>
+            <a class="animate__animated animate__backInLeft" href="index.html"> <img
+                    src="images/logo-04-pochocleras-pelis.webp" class="logo" alt="Logo de Pochocleras-Pelis"></a>
             <div class="responsive-menu " id="menu-items">
                 <nav class="navbar">
                     <ul>
@@ -29,12 +29,12 @@
                         <li><a href="#trending">Películas</a></li>
                         <li>
                             <div class="categorias">
-                                <p class="d-inline-flex gap-1">
+                                <p class="d-inline-flex">
 
                                     <button id="boton-categorias" class="position-relative btn data-bs-toggle"
                                         type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
                                         aria-expanded="false" aria-controls="collapseExample">
-                                        CATEGORIAS
+                                        <a id="categorias-nav" class="nav-link" href="#">CATEGORIAS</a>
                                     </button>
                                 </p>
                                 <div class="collapse position-absolute" id="collapseExample">
@@ -63,6 +63,9 @@
                     <a href="./pages/login.html" class="btn-log">
                         <p>Login</p>
                     </a>
+                    <a href="./pages/apipochocleras.html" class="btn-log">
+                        <p>API</p>
+                    </a>
                 </div>
                 <input class="input-search" type="search" name="search" placeholder="Buscar 🔍">
 
@@ -73,7 +76,7 @@
 
     </header>
 
-    <main class="content">
+    <main>
 
         <div class="header-content container-fluid">
 
@@ -195,9 +198,7 @@
                 </div>
 
             </div>
-
             <div class="btn-load" id="load-trend">Ver más</div>
-
         </section>
 
         <section class="portadas-estrenos ">
@@ -418,29 +419,14 @@
 
     </footer>
 
-
-
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <!--CDN PLUGIN JS para typewriter effect-->
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/cc70dc4bc7.js" crossorigin="anonymous"></script>
-
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-    </script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
 </body>
-
 
 </html>

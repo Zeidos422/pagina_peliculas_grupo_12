@@ -1,6 +1,6 @@
 /* Pages */
-@import url("./css/login.css");
-@import url("./css/registrar.css");
+
+/* @import url("./css/registrar.css"); */
 @import url("./css/slider.css");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
@@ -8,7 +8,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* text-decoration: none; */
   list-style: none;
 }
 
@@ -18,9 +17,10 @@ body {
   color: #ffffff;
   margin-top: 0;
   padding-top: 0;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
 }
-
-
 
 .cabecera .min-height-index {
   min-height: 100vh;
@@ -30,8 +30,10 @@ main {
   margin-top: 5rem;
 }
 
-
-
+.RegLog {
+  display: grid;
+  place-items: center;
+}
 
 /*------------------------//ESTILOS HEADER//--------------------------------------------------------*/
 
@@ -74,22 +76,59 @@ a {
 .responsive-menu {
   display: flex;
   justify-content: flex-start;
-  align-items: baseline;
   gap: 70px;
 }
 
 .navbar ul {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  text-align: center;
+  justify-content: center;
   gap: 25px;
   padding: 0;
-  margin-left: 0px;
-  margin-top: 0px;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+#categorias-nav {
+  font-size: 1.56rem;
+}
+
+.d-inline-flex {
+  margin: 0;
+  padding: 0;
 }
 
 .navbar ul li a:hover {
   text-decoration: underline;
+}
+
+.btn-log p:hover {
+  text-decoration: underline;
+}
+
+#boton-categorias {
+  color: #D4AF37;
+  border: none;
+  background-color: none;
+  margin: 0;
+  padding: 0;
+}
+
+#lista-categorias {
+  background-color: #0B173B;
+}
+
+#texto {
+  color: #D4AF37;
 }
 
 .icon-menu {
@@ -160,35 +199,38 @@ a {
   margin-left: 450px;
 }
 
-.btn-log {
-  display: inline-block;
-  background-color: #d4af37;
+.btn-log-contenedor {
+  display: flex;
+  align-items: center;
+  align-content: center;
   color: #080f28;
-  padding: 0.1em 0.3em;
-  border-radius: 2%;
-  width: 4em;
-}
-
-.menu.container a :hover {
-  color: #3333339d;
+  gap: 1rem;
 }
 
 .btn-portada p {
   display: inline-block;
   padding: 5px 5px;
   margin-left: 280px;
-  color: black;
-  background-color: #d4af37;
+  color: #D4AF37;
 }
 
+.menu.container a :hover {
+  color: #3333339d;
+}
+
+
+
 .portada_izquierda a :hover {
-  color: #080f28;
   font-size: 20px;
 }
 
-/*------------------------//FIN ESTILOS HEADER//--------------------------------------------------------*/
+p {
+  margin: 0;
+}
 
-/*------------------------//ESTILOS SECCIONES PELICULAS MÁS VISTAS Y ESTRENOS//--------------------------------------------------------*/
+/*------------------------//FIN ESTILOS HEADER//---------------------------------------------------*/
+
+/*------------------------//ESTILOS SECCIONES PELICULAS MÁS VISTAS Y ESTRENOS//--------------------*/
 .main-container {
   display: flex;
   gap: 4em;
@@ -213,10 +255,6 @@ a {
 
 }
 
-
-
-
-
 .card-trending-container,
 .card-news-container {
   display: flex;
@@ -233,7 +271,6 @@ a {
 .card-news-container {
   justify-content: space-around;
 }
-
 
 .card-trending,
 .card-news {
@@ -309,54 +346,251 @@ a {
   border: solid #080f28;
 }
 
-/*------------------------//ESTILOS ASIDE PELICULAS POR CATEGORÍA//--------------------------------------------------------*/
-.sidebar h2 {
+/*------------------------//FIN ESTILOS SECCIONES PELICULAS MÁS VISTAS Y ESTRENOS//----------------*/
 
-  letter-spacing: 0.03em;
+/*------------------------//ESTILOS LOGIN//--------------------------------------------------------*/
+
+.container_login {
+  min-width: 40%;
+  margin: 40px auto;
+  padding: 20px;
+  border: solid #D4AF37;
+  border-radius: 5px;
+  background-color: #080F28;
+  border: solid #D4AF37;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.category-container {
-  background-color: #060b1e;
-  border-radius: 2%;
-  padding-top: 0.5em;
-  padding: 1em;
+.container_login h2 {
+  text-align: center;
+  border: solid #D4AF37;
+  background-color: #D4AF37;
+  color: #080F28;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-.category-list {
-  display: flex;
-  flex-direction: column;
+.form-group_login {
+  margin-bottom: 20px;
 }
 
-.category-container ul li a {
-  display: inline-block;
-  font-size: 1.2em;
-  padding: 0.3em;
-  /*margin: 0.3em;*/
+.form-group_login label {
+  display: block;
+  /* font-weight: bold; */
+  margin-bottom: 5px;
+  font-size: 16px;
 }
 
-.category-container ul li a:hover {
-  background-color: #202746;
+.form-group_login input[type="text"],
+.form-group_login input[type="password"] {
   width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #333333;
+  color: #ffffff;
 }
+
+.form-group_login button {
+  background-color: #D4AF37;
+  color: #080F28;
+  text-align: center;
+  width: 30%;
+  padding: 10px;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.form-group_login button:hover {
+  background-color: #e4c022;
+}
+
+.form-group_login .register-button {
+  background-color: #D4AF37;
+  color: #080F28;
+  text-align: center;
+  width: 30%;
+  padding: 10px;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.form-group_login .register-button:hover {
+  background-color: #e4c022;
+}
+
+#botonesLog {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0px;
+}
+
+/*------------------------//FIN ESTILOS LOGIN//--------------------------------------------------------*/
+
+/*------------------------//ESTILOS BIENVENIDO//--------------------------------------------------------*/
+
+.bienvenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*------------------------//FIN ESTILOS BIENVENIDO//--------------------------------------------------------*/
+
+/*------------------------//ESTILOS REGISTRAR//--------------------------------------------------------*/
+
+.container-registrar {
+  min-width: 40%;
+  margin: 40px auto;
+  padding: 20px;
+  border: solid #D4AF37;
+  border-radius: 5px;
+  background-color: #080F28;
+  border: solid #D4AF37;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-registrar h2 {
+  text-align: center;
+  border: solid #D4AF37;
+  background-color: #D4AF37;
+  color: #080F28;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.form-group-registrar {
+  margin-bottom: 20px;
+}
+
+.form-group-registrar label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.form-group-registrar input[type="text"],
+.form-group-registrar input[type="email"],
+.form-group-registrar input[type="password"],
+.form-group-registrar input[type="date"],
+.form-group-registrar select[name="pais"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.termCond {
+  display: flex;
+  align-items: center;
+  column-gap: 0.7rem;
+}
+
+#botonesReg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0px;
+}
+
+#terms {
+  margin-bottom: 0px;
+}
+
+input {
+  accent-color: #D4AF37;
+}
+
+.ayuda {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.form-group-registrar .register-button {
+  background-color: #D4AF37;
+  color: #080F28;
+  text-align: center;
+  width: 30%;
+  padding: 10px;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.form-group-registrar button:hover {
+  background-color: #e4c022;
+}
+
+.form-group-registrar a:hover {
+  background-color: #e4c022;
+}
+
+/*------------------------//FIN ESTILOS REGISTRAR//--------------------------------------------------------*/
+
+/*------------------------//ESTILOS API//--------------------------------------------------------*/
+
+.buscaPelis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.buscador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#semanalesPelis {
+  font-family: "Bebas Neue", sans-serif;
+  display: inline-block;
+  background-color: #D4AF37;
+  color: #080F28;
+  text-align: center;
+  width: 100%;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 1.56rem;
+}
+
+/*------------------------//FIN ESTILOS API//--------------------------------------------------------*/
 
 /*------------------------//ESTILOS FOOTER//--------------------------------------------------------*/
+
 footer {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  padding-bottom: 2em;
-  background-color: #060b1e;
+  padding-bottom: 0;
+  background-color: none;
   margin-bottom: 0px;
   align-items: center;
-
+  min-width: 100%;
 }
 
 .container.footer {
   margin-top: 2em;
   margin-bottom: 0px;
-  padding-bottom: 0px;
+  padding: 0;
   min-width: 100%;
-  padding-top: 0em;
 }
 
 .footer-menu {
@@ -388,8 +622,6 @@ footer p {
   text-align: center;
   background-color: #070708;
   min-width: 100%;
-  padding: 1em;
-  margin-bottom: 0px;
 }
 
 
@@ -437,7 +669,6 @@ footer p {
     margin-right: 0px;
     background-image: url(/images/header-portada.png);
     background-position: top center;
-    /* background-repeat: no-repeat;*/
     background-size: cover;
     display: flex;
     min-height: 80vh;
@@ -515,7 +746,7 @@ footer p {
   }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1023px) {
 
   .content {
     margin-top: -20px;
@@ -525,8 +756,6 @@ footer p {
     max-width: 850px;
 
   }
-
-
 
   .main-container {
     flex-direction: column-reverse;
@@ -610,7 +839,7 @@ footer p {
   .responsive-menu.active {
     display: flex;
     animation: showMenu 400ms ease-in-out both;
-    /*Animación que retarda aprición y desaparición del menú  para que no sea tan brusco el cambio*/
+    /*Animación que retarda aparición y desaparición del menú  para que no sea tan brusco el cambio*/
   }
 
   .logo {
@@ -847,7 +1076,7 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* flex-direction: row;   */
+    flex-direction: row;
     height: 100%;
     margin-bottom: 0%;
   }
@@ -968,7 +1197,9 @@ footer p {
 }
 
 /* Aqui comienza estilo de CATEGORIAS */
-#boton-categorias {
+
+
+/* #boton-categorias {
   color: #D4AF37;
   border: none;
   background-color: none;
@@ -983,4 +1214,4 @@ footer p {
 
 #texto {
   color: #D4AF37;
-}
+} */
