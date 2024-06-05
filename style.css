@@ -545,30 +545,8 @@ input {
 
 /*------------------------//ESTILOS API//--------------------------------------------------------*/
 
-.buscaPelis {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.buscador {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-#semanalesPelis {
-  font-family: "Bebas Neue", sans-serif;
-  display: inline-block;
-  background-color: #D4AF37;
-  color: #080F28;
-  text-align: center;
-  width: 100%;
-  border-radius: 16px;
-  cursor: pointer;
-  font-size: 1.56rem;
+.api_rm {
+  padding: 0 5%;
 }
 
 /*------------------------//FIN ESTILOS API//--------------------------------------------------------*/

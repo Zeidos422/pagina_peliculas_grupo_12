@@ -19,32 +19,24 @@
         <div class="cabecera">
             <a class="animate__animated animate__backInLeft" href="../index.html"><img
                     src="../images/logo-04-pochocleras-pelis.webp" class="logo" alt="Logo de Pochocleras-Pelis"></a>
-            <div class="buscaPelis">
+            <div>
                 <a href="../index.html">Inicio</a></li>
-                <div class="buscador">
-                    <input class="input-search" type="search" name="search" placeholder="Buscar 🔍">
-                    <button type="submit" id="semanalesPelis">
-                        <p>Películas Semanales</p>
-                    </button>
-                </div>
             </div>
         </div>
 
     </header>
 
     <main>
-        <section class="movies container" id="trending">
-            <h2>API DE PELÍCULAS POPULARES</h2>
-            <h2>POST DATA: Elimine el codigo Javascript de esta pagina para hacerlo desde cero nuevamente y corregir
-                cualquier error!</h2>
-            <button id="prevBtn">Anterior</button>
-            <div class="carousel-container">
-                <div class="card-trending-container api-container" id="movies-container">
-                </div>
-            </div>
-            <button id="nextBtn">Siguiente</button>
-            <div class="btn-load" id="load-trend">Ver más</div>
-        </section>
+
+        <div class="api_rm">
+            <section class="movies container" id="news">
+
+                <h2>API RICK AND MORTY</h2>
+                <div class="card-news-container"></div>
+
+            </section>
+        </div>
+
     </main>
 
     <footer class="container footer">
@@ -67,7 +59,6 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/cc70dc4bc7.js" crossorigin="anonymous"></script>
-    <script src="../script.js"></script>
     <script src="../moviesapi.js"></script>
 
 </body>

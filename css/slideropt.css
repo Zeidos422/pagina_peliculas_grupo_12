@@ -1,65 +1,48 @@
 .portadas-estrenos {
     margin-top: 1em;
     width: 100%;
-    /*Se establece un ancho sino desborda el margen derecho de toda la página,generándose scroll horizontal*/
-
 }
 
-.portadas-estrenos>h2 {
+.portadas-estrenos>h2,
+.texto-estreno>h3 {
     color: #d4af37;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 25px;
+    margin: 20px auto 25px;
     letter-spacing: 1px;
-    text-align: center;
-    background-color: #060b1e;
+    background-color: none;
     max-width: 1200px;
     padding: 0.2em;
 }
 
-
-
-.interno-estreno1 {
+.interno-estreno1,
+.interno-estreno2,
+.interno-estreno3,
+.interno-estreno4,
+.interno-estreno5 {
     box-sizing: border-box;
-    background: linear-gradient(to right top, #c5c3c3a7, #6f6e6ea7), url(../imagenes/fondo_estreno1.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+.interno-estreno1 {
+    background-image: linear-gradient(to right top, #c5c3c3a7, #6f6e6ea7), url(../imagenes/fondo_estreno1.jpg);
+}
 
 .interno-estreno2 {
-    box-sizing: border-box;
-    background: linear-gradient(to right top, #c5c3c3a7, #6f6e6ea7), url(../imagenes/fondo_estreno2.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: linear-gradient(to right top, #c5c3c3a7, #6f6e6ea7), url(../imagenes/fondo_estreno2.jpg);
 }
 
 .interno-estreno3 {
-    box-sizing: border-box;
-    background: linear-gradient(to right top, #c5c3c3a7, #6f6e6ea7), url(../imagenes/fondo_estreno3.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: linear-gradient(to right top, #c5c3c3a7, #6f6e6ea7), url(../imagenes/fondo_estreno3.jpg);
 }
 
 .interno-estreno4 {
-    box-sizing: border-box;
-    background: linear-gradient(to right top, #c5c3c3a7, #6f6e6ea7), url(../imagenes/fondo_estreno4.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: linear-gradient(to right top, #c5c3c3a7, #6f6e6ea7), url(../imagenes/fondo_estreno4.jpg);
 }
 
 .interno-estreno5 {
-    box-sizing: border-box;
-    background: linear-gradient(to right top, #c5c3c3a7, #6f6e6ea7), url(../imagenes/fondo_estreno5.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: linear-gradient(to right top, #c5c3c3a7, #6f6e6ea7), url(../imagenes/fondo_estreno5.jpg);
 }
 
 .imagen-estreno>img {
@@ -75,7 +58,6 @@
 
 .estreno-info {
     width: 75%;
-    height: initial;
     padding: 2rem;
     margin: 0 auto;
     display: flex;
@@ -101,11 +83,6 @@
     margin: .4rem;
 }
 
-.texto-estreno>h3 {
-    font-size: clamp(2em, .5vh, 5em);
-    font-weight: 700;
-}
-
 @media (max-width: 935px) {
     .texto-estreno>h3 {
         font-size: 1.5rem;
@@ -116,13 +93,11 @@
     display: flex;
     position: relative;
     margin: 0 auto;
-
 }
 
 .slider-estrenos {
     display: flex;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     animation: slide 5s infinite alternate ease-in-out;
@@ -132,7 +107,6 @@
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: cover;
-
 }
 
 .slider-nav {
@@ -187,6 +161,3 @@
 .slider-nav a:hover {
     opacity: 100%;
 }
-
-
-/*        Codigo optimizado         */
