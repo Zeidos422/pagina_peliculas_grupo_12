@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var password = document.getElementById("password").value;
 
         if (username == pochoadmin && password == pochopass) {
-            window.location.href = 'bienvenido.html';
+            window.location.href = 'apipochocleras.html';
         } else {
             if (username == '') {
                 user_error.textContent = 'Por favor ingrese su usuario.';
